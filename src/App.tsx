@@ -46,7 +46,7 @@ const App = () => {
 
       {/* About Section */}
 
-      <div id='about' className='grid grid-cols-2 min-h-screen'>
+      <div id='about' className='grid grid-cols-2 min-h-screen my-32'>
         <div className='my-auto'>
           <h1 className='font-montserrat font-bold text-6xl mb-4 leading-[1.25]'>
             About Our Company
@@ -63,6 +63,41 @@ const App = () => {
         </div>
 
         <div className='w-full h-full bg-blue-300'></div>
+      </div>
+
+      {/* What We Do Section */}
+
+      <div id='what-we-do' className='min-h-screen text-center my-32'>
+        <h1 className='font-montserrat font-bold text-[64px]'>What We Do</h1>
+
+        <div className='w-full grid grid-cols-3 gap-6 mt-8'>
+          {[
+            {
+              title: 'Support Children’s Education',
+              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+            },
+            {
+              title: 'Create Awareness',
+              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+            },
+            {
+              title: 'Provide Support',
+              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+            },
+          ].map((cardItem, index) => (
+            <div key={cardItem.title} className='w-full'>
+              <div className='font-libre text-2xl text-center rounded-full py-5 px-7 bg-slate-400 w-fit mx-auto'>
+                {index + 1}
+              </div>
+
+              <h1 className='font-space font-bold text-[32px] mb-4 mt-6'>
+                {cardItem.title}
+              </h1>
+
+              <p className='text-xl leading-[2]'>{cardItem.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div>Get involved</div>
