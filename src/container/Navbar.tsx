@@ -21,7 +21,7 @@ const Navbar = () => {
       </nav>
 
       <button
-        className='py-3 px-8 bg-textBlack text-textWhite font-bold font-space text-lg
+        className='py-3 px-8 bg-[#125A71] text-textWhite font-bold font-space text-lg
             rounded-full'
       >
         <a href='donate'>Donate Now</a>

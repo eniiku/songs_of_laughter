@@ -21,7 +21,7 @@ const App = () => {
             Self-Sufficiency
           </p>
 
-          <button className='px-8 py-4 rounded-full font-space font-bold bg-textBlack'>
+          <button className='px-8 py-4 rounded-full font-space font-bold bg-[#125A71]'>
             <a href='#donate' className='text-textWhite text-xl'>
               Donate Now
             </a>
