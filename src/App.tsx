@@ -9,6 +9,8 @@ const App = () => {
         id='home'
         className='w-full min-h-[90vh] relative grid items-center justify-start z-0'
       >
+        <div className='absolute -right-16 top-0 w-[70vw] h-[90vh] bg-[#125A71] -z-10'></div>
+
         <div className='my-auto'>
           <h1 className='font-montserrat font-bold text-7xl mb-4'>
             Rebuilding Lives:
@@ -25,8 +27,17 @@ const App = () => {
             </a>
           </button>
         </div>
+      </div>
 
-        <div className='absolute -right-16 top-0 w-[70vw] h-[90vh] bg-indigo-700 -z-10'></div>
+      <div className='text-center my-32 bg-indigo-500 -mx-16 p-16 radial-gradient text-textWhite'>
+        <q className='font-zilla font-bold text-[52px] mb-10'>
+          It’s our duty to love the unloved, help the helpless and bring hope to
+          the hopeless
+        </q>
+
+        <p className='font-montserrat font-medium text-2xl text-right'>
+          - Anthony Douglas Williams
+        </p>
       </div>
 
       <div>about page</div>
