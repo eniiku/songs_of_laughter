@@ -11,7 +11,7 @@ const Navbar = () => {
                 {/* TODO: set links to bold on hover and change font */}
 
                 <a
-                  href={`${navLink}`}
+                  href={`#${navLink}`}
                   className='uppercase opacity-70 hover:opacity-100'
                 >
                   {navLink}
