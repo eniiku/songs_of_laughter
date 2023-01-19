@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         bgWhite : '#F2F2F2',
         textWhite: "#ECECEC",
-        textBlack: "#222222"
+        textBlack: "#111111"
       },
       fontFamily: {
         "libre" :['Libre Baskerville', 'serif'],

@@ -8,6 +8,8 @@ const Navbar = () => {
           {['home', 'about', 'what we do', 'get involved'].map((navLink) => (
             <li key={navLink}>
               <button>
+                {/* TODO: set links to bold on hover and change font */}
+
                 <a
                   href={`${navLink}`}
                   className='uppercase opacity-70 hover:opacity-100'
