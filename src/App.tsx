@@ -100,7 +100,52 @@ const App = () => {
         </div>
       </div>
 
-      <div>Get involved</div>
+      <div className='min-h-screen grid grid-cols-2 gap-8'>
+        <div className='my-auto'>
+          <h1 className='font-montserrat font-bold text-6xl mb-4 leading-[1.2]'>
+            Want to get involved? Contact us today.
+          </h1>
+          <div className='text-xl leading-[2]'>
+            <p className='w-[80%]'>
+              Lorem ipsum dolor sit amet consectetur. Sit velit aenean eros
+              lacus purus quam arcu quisque. Ipsum felis fermentum non arcu
+              ornare scelerisque quam malesuada. Tellus id at amet vel quis ac.
+              Quis elementum varius hac pellentesque ultrices felis.
+            </p>
+
+            <div className='mt-4'>
+              <p>Phone: +(234) 8011223344</p>
+              <p>Email: johndoe@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+
+        <form className='border border-textBlack'>
+          <div className='form_input'>
+            <label htmlFor='name'>Name</label>
+            <input type='text' id='name' />
+          </div>
+
+          <div className='form_input'>
+            <label htmlFor='email'>Email</label>
+            <input type='email' id='email' className='form_input' />
+          </div>
+
+          <div className='form_input'>
+            <label htmlFor='subject'>Subject</label>
+            <input type='text' id='subject' />
+          </div>
+
+          <div className='form_input'>
+            <label htmlFor='message'>Message</label>
+            <textarea id='message'></textarea>
+          </div>
+
+          <button type='submit'>Donate Now</button>
+        </form>
+      </div>
 
       <div>footer</div>
     </div>
