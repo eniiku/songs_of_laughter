@@ -1,5 +1,12 @@
+import * as React from 'react';
+
 const Navbar = () => {
   const navLinks = ['home', 'about', 'what we do', 'get involved'];
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleOpenMenu = () => setIsOpen(true);
+  const handleCloseMenu = () => setIsOpen(false);
 
   return (
     <header className='flex items-center justify-between py-6'>
@@ -36,34 +43,35 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
+      <button onClick={handleOpenMenu} className='lg:hidden'>
+        <p className='font-medium text-lg border border-textBlack py-1 px-3'>
+          Menu
+        </p>
+      </button>
 
-      <div className='lg:hidden'>
-        <button>
-          <p className='font-medium text-lg border border-textBlack py-1 px-3'>
-            Menu
-          </p>
-        </button>
-
-        <nav className='absolute inset-0 bg-textBlack z-30 grid items-center'>
-          <ul>
-            {navLinks.map((mobileLinks) => (
-              <li
-                key={mobileLinks}
-                className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5'
-              >
-                <button>
-                  <a
-                    href={`#${mobileLinks}`}
-                    className='text-xl font-medium text-textWhite capitalize'
-                  >
-                    {mobileLinks}
-                  </a>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      {isOpen ? (
+        <div className='lg:hidden'>
+          <nav className='absolute inset-0 bg-textBlack z-30 grid items-center'>
+            <ul>
+              {navLinks.map((mobileLinks) => (
+                <li
+                  key={mobileLinks}
+                  className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5'
+                >
+                  <button onClick={handleCloseMenu}>
+                    <a
+                      href={`#${mobileLinks}`}
+                      className='text-xl font-medium text-textWhite capitalize'
+                    >
+                      {mobileLinks}
+                    </a>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      ) : null}
     </header>
   );
 };
