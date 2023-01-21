@@ -15,9 +15,3 @@
 .radial-gradient {
 background: radial-gradient(40.87% 548.69% at 43.92% 49.87%, #2FBFC8 0%, #125A71 100%); 
 }
-
-@layer components {
-  .form_input {
-    @apply w-full 
-  }
-}
