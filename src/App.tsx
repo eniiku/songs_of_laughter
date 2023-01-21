@@ -124,28 +124,44 @@ const App = () => {
 
         {/* Contact Form */}
 
-        <form className='border border-textBlack'>
-          <div className='form_input'>
-            <label htmlFor='name'>Name</label>
-            <input type='text' id='name' />
+        <form className='border border-textBlack p-8 flex flex-col justify-between'>
+          {[
+            { label: 'name', type: 'text' },
+            { label: 'email', type: 'email' },
+            { label: 'subject', type: 'text' },
+          ].map((formDetails) => (
+            <div key={formDetails.label}>
+              <label
+                htmlFor={formDetails.label}
+                className='w-full capitalize text-xl'
+              >
+                {formDetails.label}
+              </label>
+
+              <input
+                type={formDetails.type}
+                id={formDetails.label}
+                className='w-full my-4 bg-transparent border border-textBlack py-3 px-3'
+              />
+            </div>
+          ))}
+
+          <div>
+            <label htmlFor='message' className='w-full capitalize text-xl'>
+              Message
+            </label>
+            <textarea
+              id='message'
+              className='w-full my-4 bg-transparent border border-textBlack py-3 px-3 h-auto'
+            ></textarea>
           </div>
 
-          <div className='form_input'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' className='form_input' />
-          </div>
-
-          <div className='form_input'>
-            <label htmlFor='subject'>Subject</label>
-            <input type='text' id='subject' />
-          </div>
-
-          <div className='form_input'>
-            <label htmlFor='message'>Message</label>
-            <textarea id='message'></textarea>
-          </div>
-
-          <button type='submit'>Donate Now</button>
+          <button
+            type='submit'
+            className='px-8 py-4 font-space font-bold bg-[#125A71] text-textWhite text-xl w-fit'
+          >
+            Donate Now
+          </button>
         </form>
       </div>
 
