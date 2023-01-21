@@ -100,7 +100,9 @@ const App = () => {
         </div>
       </div>
 
-      <div className='min-h-screen grid grid-cols-2 gap-8'>
+      {/* Contact Section */}
+
+      <div className='min-h-screen grid grid-cols-2 gap-8 mb-24'>
         <div className='my-auto'>
           <h1 className='font-montserrat font-bold text-6xl mb-4 leading-[1.2]'>
             Want to get involved? Contact us today.
@@ -147,7 +149,56 @@ const App = () => {
         </form>
       </div>
 
-      <div>footer</div>
+      {/* Footer Section */}
+      <footer className='grid grid-cols-2 gap-4 py-16'>
+        <div>
+          <div className='mb-6 font-poppins'>
+            <h1 className='mb-2 font-bold text-4xl'>LOGO</h1>
+
+            <p className='font-medium text-base opacity-60'>
+              &copy; 2022. All Rights Resevered
+            </p>
+          </div>
+
+          <div>
+            <h1 className='font-montserrat font-bold text-xl'>Follow Us</h1>
+            <ul className='flex gap-2 font-space text-base opacity-70'>
+              <li>FB</li>
+              <li>IG</li>
+              <li>TW</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className='grid grid-cols-3 gap-4'>
+          {[
+            {
+              title: 'Navigation',
+              links: ['Home', 'About', 'Get Involved', 'Contact'],
+            },
+            {
+              title: 'Help',
+              links: ['FAQ', 'Terms of Use', 'Privacy Policy'],
+            },
+            {
+              title: 'Contact',
+              links: ['+(234)8011223344', 'johndoe@gmail.com'],
+            },
+          ].map((footerItem) => (
+            <div key={footerItem.title}>
+              <h1 className='font-bold font-space text-xl mb-2'>
+                {footerItem.title}
+              </h1>
+
+              <ul className='flex flex-col gap-2 font-poppins font-medium text-xl opacity-70'>
+                {footerItem.links.map((footerLinks) => (
+                  <li key={footerLinks}>{footerLinks}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </footer>
     </div>
   );
 };
