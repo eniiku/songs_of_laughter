@@ -171,11 +171,39 @@ const App = () => {
         </div>
 
         <div className='grid grid-cols-3 gap-4'>
+          {/* Footer Nav Links */}
+
           {[
             {
               title: 'Navigation',
-              links: ['Home', 'About', 'Get Involved', 'Contact'],
+              links: ['home', 'about', 'contact'],
             },
+          ].map((navItem) => (
+            <div key={navItem.title}>
+              <h1 className='font-bold font-space text-xl mb-4'>
+                {navItem.title}
+              </h1>
+
+              <ul className='flex flex-col gap-4 font-poppins text-xl'>
+                {navItem.links.map((footerLinks) => (
+                  <li key={footerLinks}>
+                    <button>
+                      <a
+                        href={`#${footerLinks}`}
+                        className='capitalize opacity-70 hover:opacity-100 hover:font-medium'
+                      >
+                        {footerLinks}
+                      </a>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Other Footer Links */}
+
+          {[
             {
               title: 'Help',
               links: ['FAQ', 'Terms of Use', 'Privacy Policy'],
@@ -186,11 +214,11 @@ const App = () => {
             },
           ].map((footerItem) => (
             <div key={footerItem.title}>
-              <h1 className='font-bold font-space text-xl mb-2'>
+              <h1 className='font-bold font-space text-xl mb-4'>
                 {footerItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-2 font-poppins font-medium text-xl opacity-70'>
+              <ul className='flex flex-col gap-4 font-poppins font-medium text-xl opacity-70'>
                 {footerItem.links.map((footerLinks) => (
                   <li key={footerLinks}>{footerLinks}</li>
                 ))}
