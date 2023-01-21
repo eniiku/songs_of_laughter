@@ -100,6 +100,75 @@ const App = () => {
         </div>
       </div>
 
+      {/* Donate Section */}
+      <div className='min-h-screen mb-24 grid place-content-center'>
+        <div className='text-center mb-16'>
+          <h1 className='font-montserrat font-bold text-6xl mb-3'>
+            Select your donation
+          </h1>
+
+          <p className='text-xl w-[80%] mx-auto'>
+            You give but little when you give of yourself, it when you give of
+            your yourself. Ready to the incredible?
+          </p>
+        </div>
+
+        <div className='w-full grid grid-cols-3 justify-evenly'>
+          {[
+            { price: 10, priceText: 'Worth feed for 2 people in Africa' },
+            { price: 50, priceText: 'Worth feed for 10 people in Africa' },
+          ].map((cardItem) => (
+            <div
+              key={cardItem.price}
+              className='relative w-[80%] bg-white shadow-xl'
+            >
+              <div className='w-full h-2 absolute top-0 bg-[#125A71]'></div>
+
+              <div className='px-4 py-3'>
+                <div className='mt-4'>
+                  <h1 className='font-libre font-bold text-4xl'>{`$${cardItem.price}`}</h1>
+                  <p className='text-lg my-3'>{cardItem.priceText}</p>
+                </div>
+
+                <button className='font-space font-bold text-textWhite bg-[#125A71] py-2 px-5 rounded-full text-xl'>
+                  Donate
+                </button>
+              </div>
+            </div>
+          ))}
+
+          <div className='relative w-[80%] bg-white shadow-xl'>
+            <div className='w-full h-2 absolute top-0 bg-[#125A71]'></div>
+
+            <div className='px-4 py-3 my-4'>
+              <h1 className='font-libre font-bold text-4xl'>Custom</h1>
+
+              <form
+                className='mt-4 overflow-hidden flex gap-2 border-b border-b-textBlack text-xl
+                my-3'
+              >
+                <label
+                  htmlFor='customPrice'
+                  className='py-1 font-libre font-bold opacity-50'
+                >
+                  $
+                </label>
+                <input
+                  type='text'
+                  name='custom'
+                  placeholder='100'
+                  className='font-libre bg-transparent py-1 w-fit active:border-none'
+                />
+              </form>
+
+              <button className='font-space font-bold text-textWhite bg-[#125A71] py-2 px-5 rounded-full text-xl mt-2'>
+                Donate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Contact Section */}
 
       <div className='min-h-screen grid grid-cols-2 gap-8 mb-24'>
@@ -123,6 +192,8 @@ const App = () => {
         </div>
 
         {/* Contact Form */}
+        {/* FIXME: change padding on form, style text in form */}
+        {/* TODO: add placeholder text for form */}
 
         <form className='border border-textBlack p-8 flex flex-col justify-between'>
           {[
@@ -166,6 +237,7 @@ const App = () => {
       </div>
 
       {/* Footer Section */}
+      {/* TODO: add "what we do and donate" to navigation links */}
       <footer className='grid grid-cols-2 gap-4 py-16'>
         <div>
           <div className='mb-6 font-poppins'>
