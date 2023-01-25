@@ -2,7 +2,7 @@ import Navbar from './container/Navbar';
 
 const App = () => {
   return (
-    <div className='bg-bgWhite px-16 text-textBlack'>
+    <div className='bg-bgWhite px-4 lg:px-16 text-textBlack'>
       <Navbar />
 
       {/* Home Section */}
@@ -11,20 +11,23 @@ const App = () => {
         id='home'
         className='w-full min-h-[90vh] relative grid items-center justify-start z-0'
       >
-        <div className='absolute -right-16 top-0 w-[70vw] h-[90vh] bg-[#125A71] -z-10'></div>
+        <div className='absolute inset-0 lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] bg-[#125A71] -z-10'></div>
 
-        <div className='my-auto'>
-          <h1 className='font-montserrat font-bold text-7xl mb-4'>
+        <div className='my-auto text-center'>
+          <h1 className='font-montserrat font-bold text-5xl lg:text-7xl mb-3'>
             Rebuilding Lives:
           </h1>
 
-          <p className='text-xl w-2/3 mb-4 leading-[165%]'>
+          <p className='text-base lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto'>
             Supporting Widows, Divorcees, and Homeless Women on the Road to
             Self-Sufficiency
           </p>
 
-          <button className='px-8 py-4 rounded-full font-space font-bold bg-[#125A71]'>
-            <a href='#donate' className='text-textWhite text-xl'>
+          <button
+            className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
+            lg:text-textWhite bg-textWhite'
+          >
+            <a href='#donate' className='text-lg lg:text-xl'>
               Donate Now
             </a>
           </button>
