@@ -126,39 +126,39 @@ const App = () => {
 
       {/* TODO: center donation cards */}
       {/* Donate Section */}
-      <div className='min-h-screen mb-16 lg:mb-24 grid place-content-center'>
-        <div className='text-center mb-8 lg:mb-16'>
-          <h1 className='font-montserrat font-bold text-4xl lg:text-6xl mb-3'>
+      <div className='min-h-screen md:min-h-[80vh] mb-16 md:mb-20 lg:mb-24 grid place-content-center'>
+        <div className='text-center mb-8 md:mb-12 lg:mb-16'>
+          <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-3'>
             Select your donation
           </h1>
 
-          <p className='text-lg lg:text-xl w-[90%] lg:w-[80%] mx-auto'>
+          <p className='text-lg md:text-xl w-[90%] lg:w-[80%] mx-auto'>
             You give but little when you give of yourself, it when you give of
             your yourself. Ready to the incredible?
           </p>
         </div>
 
-        <div className='w-full grid lg:grid-cols-3 justify-evenly gap-8 lg:gap-0'>
+        <div className='w-full grid md:grid-cols-3 justify-evenly gap-8'>
           {[
             { price: 10, priceText: 'Worth feed for 2 people in Africa' },
             { price: 50, priceText: 'Worth feed for 10 people in Africa' },
           ].map((cardItem) => (
             <div
               key={cardItem.price}
-              className='relative lg:w-[80%] w-[70%] bg-white shadow-xl'
+              className='relative md:w-[80%] w-[70%] bg-white shadow-xl'
             >
-              <div className='w-full h-1 lg:h-2 absolute top-0 bg-[#125A71]'></div>
+              <div className='w-full h-1 md:h-2 absolute top-0 bg-[#125A71]'></div>
 
               <div className='px-4 py-3'>
                 <div className='mt-4'>
-                  <h1 className='font-libre font-bold text-3xl lg:text-4xl'>{`$${cardItem.price}`}</h1>
-                  <p className='text-sm lg:text-lg my-2 lg:my-3'>
+                  <h1 className='font-libre font-bold text-3xl md:text-4xl'>{`$${cardItem.price}`}</h1>
+                  <p className='text-sm md:text-base lg:text-lg my-2 md:my-3'>
                     {cardItem.priceText}
                   </p>
                 </div>
 
                 <button
-                  className='font-space font-bold text-textWhite bg-[#125A71] py-2 lg:px-5 px-4 rounded-full lg:text-xl
+                  className='font-space font-bold text-textWhite bg-[#125A71] py-2 md:px-5 px-4 rounded-full md:text-xl
                   text-sm'
                 >
                   Donate
@@ -168,10 +168,10 @@ const App = () => {
           ))}
 
           <div className='relative lg:w-[80%] w-[70%] bg-white shadow-xl'>
-            <div className='w-full h-1 lg:h-2 absolute top-0 bg-[#125A71]'></div>
+            <div className='w-full h-1 md:h-2 absolute top-0 bg-[#125A71]'></div>
 
             <div className='px-4 py-3 my-4'>
-              <h1 className='font-libre font-bold text-3xl lg:text-4xl'>
+              <h1 className='font-libre font-bold text-3xl md:text-4xl'>
                 Custom
               </h1>
 
@@ -194,7 +194,7 @@ const App = () => {
               </form>
 
               <button
-                className='font-space font-bold text-textWhite bg-[#125A71] py-2 lg:px-5 px-4 rounded-full lg:text-xl
+                className='font-space font-bold text-textWhite bg-[#125A71] py-2 md:px-5 px-4 rounded-full md:text-xl
                   text-sm'
               >
                 Donate
