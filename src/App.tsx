@@ -48,15 +48,15 @@ const App = () => {
       {/* Quote Section */}
 
       <div
-        className='text-center my-16 lg:my-32 bg-indigo-500 -mx-4 lg:-mx-16 p-4 lg:p-16 radial-gradient
+        className='text-center my-16 md:my-24 lg:my-32 bg-indigo-500 -mx-4 md:-mx-8 lg:-mx-16 p-4 pt-8 md:p-8 md:pt-12 lg:p-16 lg:pt-24 radial-gradient
         text-textWhite'
       >
-        <q className='font-zilla font-bold text-2xl leading-[1.3] lg:leading-none lg:text-[52px] mb-10'>
+        <q className='font-zilla font-bold text-2xl md:text-4xl leading-[1.1] md:leading-[1.2] lg:leading-[1.3] lg:text-[52px]'>
           It’s our duty to love the unloved, help the helpless and bring hope to
           the hopeless
         </q>
 
-        <p className='font-montserrat font-medium text-sm lg:text-2xl text-right'>
+        <p className='font-montserrat font-medium text-sm md:text-base lg:text-2xl text-right mt-2 md:mt-4 lg:mt-6'>
           - Anthony Douglas Williams
         </p>
       </div>
