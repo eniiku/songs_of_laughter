@@ -206,12 +206,12 @@ const App = () => {
 
       {/* Contact Section */}
 
-      <div className='min-h-screen grid lg:grid-cols-2 gap-8 mb-8 lg:mb-24'>
-        <div className='my-auto text-center'>
-          <h1 className='font-montserrat font-bold text-4xl lg:text-6xl mb-4 leading-[1.2]'>
+      <div className='min-h-screen grid lg:grid-cols-2 gap-8 mb-8 mb:mb-16 lg:mb-24'>
+        <div className='my-auto text-center lg:text-left'>
+          <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-[1.2]'>
             Want to get involved? Contact us today.
           </h1>
-          <div className='text-lg lg:text-xl lg:leading-[2] leading-[1.6]'>
+          <div className='text-lg md:text-xl lg:leading-[2] leading-[1.6]'>
             <p className='w-[90%] lg:w-[80%] mx-auto lg:mx-0'>
               Lorem ipsum dolor sit amet consectetur. Sit velit aenean eros
               lacus purus quam arcu quisque. Ipsum felis fermentum non arcu
@@ -239,7 +239,7 @@ const App = () => {
             <div key={formDetails.label}>
               <label
                 htmlFor={formDetails.label}
-                className='w-full capitalize text-xl'
+                className='w-full capitalize text-lg lg:text-xl'
               >
                 {formDetails.label}
               </label>
@@ -247,30 +247,30 @@ const App = () => {
               <input
                 type={formDetails.type}
                 id={formDetails.label}
-                className='w-full my-4 bg-transparent border border-textBlack py-3 px-3'
+                className='w-full my-4 bg-transparent border border-textBlack py-2 lg:py-3 px-2 lg:px-3'
               />
             </div>
           ))}
 
           <div>
-            <label htmlFor='message' className='w-full capitalize text-xl'>
+            <label htmlFor='message' className='w-full capitalize text-lg lg:text-xl'>
               Message
             </label>
             <textarea
               id='message'
-              className='w-full my-4 bg-transparent border border-textBlack py-3 px-3 h-auto'
+              className='w-full min-h-[150px] my-4 md:my-6 bg-transparent border border-textBlack py-2 lg:py-3 px-2 lg:px-3'
             ></textarea>
           </div>
 
           <button
             type='submit'
-            className='px-8 py-4 font-space font-bold bg-[#125A71] text-textWhite text-xl w-fit'
+            className='px-6 lg:px-8 py-3 lg:py-4 font-space font-bold bg-[#125A71] text-textWhite text-lg lg:text-xl w-fit'
           >
             Donate Now
           </button>
         </form>
 
-        <div className='mt-4 text-lg leading-[1.6] lg:hidden'>
+        <div className='mt-4 text-lg leading-[1.6] md:hidden'>
           <p>Phone: +(234) 8011223344</p>
           <p>Email: johndoe@gmail.com</p>
         </div>
