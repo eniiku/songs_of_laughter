@@ -261,10 +261,9 @@ const App = () => {
       </div>
 
       {/* Footer Section */}
-      {/* TODO: add "what we do and donate" to navigation links */}
-      <footer className='grid grid-cols-2 gap-4 py-16'>
-        <div>
-          <div className='mb-6 font-poppins'>
+      <footer className='grid lg:grid-cols-2 gap-4 py-6 lg:py-16'>
+        <div className=''>
+          <div className='mb-6 font-poppins hidden lg:block'>
             <h1 className='mb-2 font-bold text-4xl'>LOGO</h1>
 
             <p className='font-medium text-base opacity-60'>
@@ -282,21 +281,21 @@ const App = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid lg:grid-cols-3 grid-cols-2 gap-6 lg:gap-4'>
           {/* Footer Nav Links */}
 
           {[
             {
               title: 'Navigation',
-              links: ['home', 'about', 'contact'],
+              links: ['home', 'about', 'what we do', 'donate', 'get involved'],
             },
           ].map((navItem) => (
             <div key={navItem.title}>
-              <h1 className='font-bold font-space text-xl mb-4'>
+              <h1 className='font-bold font-space text-base lg:text-xl mb-4'>
                 {navItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins text-xl'>
+              <ul className='flex flex-col gap-4 font-poppins text-sm lg:text-xl'>
                 {navItem.links.map((footerLinks) => (
                   <li key={footerLinks}>
                     <button>
@@ -326,11 +325,11 @@ const App = () => {
             },
           ].map((footerItem) => (
             <div key={footerItem.title}>
-              <h1 className='font-bold font-space text-xl mb-4'>
+              <h1 className='font-bold font-space text-sm lg:text-xl mb-4'>
                 {footerItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins font-medium text-xl opacity-70'>
+              <ul className='flex flex-col gap-4 font-poppins font-medium text-sm lg:text-xl opacity-70'>
                 {footerItem.links.map((footerLinks) => (
                   <li key={footerLinks}>{footerLinks}</li>
                 ))}
@@ -338,6 +337,10 @@ const App = () => {
             </div>
           ))}
         </div>
+
+        <p className='font-medium text-xs mt-2 opacity-70 text-center'>
+          &copy; 2022. All Rights Resevered
+        </p>
       </footer>
     </div>
   );
