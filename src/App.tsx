@@ -65,14 +65,14 @@ const App = () => {
 
       <div
         id='about'
-        className='grid lg:grid-cols-2 min-h-[80vh] lg:min-h-screen my-16 lg:my-32'
+        className='grid md:grid-cols-2 min-h-[80vh] lg:min-h-screen my-16 md:my-24 lg:my-32'
       >
-        <div className='my-auto text-center lg:text-left'>
-          <h1 className='font-montserrat font-bold text-4xl lg:text-6xl mb-4 leading-[1.25]'>
+        <div className='my-auto text-center md:text-left'>
+          <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-[1.25]'>
             About Our Company
           </h1>
 
-          <p className='text-base lg:text-xl leading-[2] w-[85%] mx-auto lg:mx-0'>
+          <p className='text-base md:text-lg lg:text-xl leading-[2] w-[85%] mx-auto md:mx-0 lg:mx-0'>
             Lorem ipsum dolor sit amet consectetur. Laoreet sed est dui gravida
             fames est. Tellus a amet suspendisse lectus justo hac proin. Tempus
             viverra at at elementum dolor bibendum. Tempus mi facilisis faucibus
@@ -82,7 +82,7 @@ const App = () => {
           </p>
         </div>
 
-        <div className='w-full h-full bg-blue-300 hidden lg:block'></div>
+        <div className='w-full h-full bg-blue-300 hidden md:block'></div>
       </div>
 
       {/* What We Do Section */}
