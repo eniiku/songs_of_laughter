@@ -23,14 +23,25 @@ const App = () => {
             Self-Sufficiency
           </p>
 
-          <button
-            className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
+          <div className='flex gap-4 justify-center items-center'>
+            <button
+              className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
             lg:text-textWhite bg-textWhite'
-          >
-            <a href='#donate' className='text-lg md:text-xl'>
-              Donate Now
-            </a>
-          </button>
+            >
+              <a href='#donate' className='text-lg lg:text-xl'>
+                Donate Now
+              </a>
+            </button>
+
+            <button>
+              <a
+                href='#about'
+                className='underline underline-offset-4 text-base lg:text-lg font-medium opacity-60 hover:opacity-100 text-textBlack'
+              >
+                See more >
+              </a>
+            </button>
+          </div>
         </div>
       </div>
 
