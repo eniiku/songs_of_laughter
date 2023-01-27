@@ -195,20 +195,20 @@ const App = () => {
 
       {/* Contact Section */}
 
-      <div className='min-h-screen grid grid-cols-2 gap-8 mb-24'>
-        <div className='my-auto'>
-          <h1 className='font-montserrat font-bold text-6xl mb-4 leading-[1.2]'>
+      <div className='min-h-screen grid lg:grid-cols-2 gap-8 mb-8 lg:mb-24'>
+        <div className='my-auto text-center'>
+          <h1 className='font-montserrat font-bold text-4xl lg:text-6xl mb-4 leading-[1.2]'>
             Want to get involved? Contact us today.
           </h1>
-          <div className='text-xl leading-[2]'>
-            <p className='w-[80%]'>
+          <div className='text-lg lg:text-xl lg:leading-[2] leading-[1.6]'>
+            <p className='w-[90%] lg:w-[80%] mx-auto lg:mx-0'>
               Lorem ipsum dolor sit amet consectetur. Sit velit aenean eros
               lacus purus quam arcu quisque. Ipsum felis fermentum non arcu
               ornare scelerisque quam malesuada. Tellus id at amet vel quis ac.
               Quis elementum varius hac pellentesque ultrices felis.
             </p>
 
-            <div className='mt-4'>
+            <div className='mt-4 hidden lg:block'>
               <p>Phone: +(234) 8011223344</p>
               <p>Email: johndoe@gmail.com</p>
             </div>
@@ -258,6 +258,11 @@ const App = () => {
             Donate Now
           </button>
         </form>
+
+        <div className='mt-4 text-lg leading-[1.6] lg:hidden'>
+          <p>Phone: +(234) 8011223344</p>
+          <p>Email: johndoe@gmail.com</p>
+        </div>
       </div>
 
       {/* Footer Section */}
