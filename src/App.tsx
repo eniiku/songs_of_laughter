@@ -277,18 +277,18 @@ const App = () => {
       </div>
 
       {/* Footer Section */}
-      <footer className='grid lg:grid-cols-2 gap-4 py-6 lg:py-16'>
-        <div className=''>
-          <div className='mb-6 font-poppins hidden lg:block'>
-            <h1 className='mb-2 font-bold text-4xl'>LOGO</h1>
+      <footer className='grid lg:grid-cols-2 gap-4 py-6 md:py-12 lg:py-16'>
+        <div className="md:grid grid-cols-2 lg:block">
+          <div className='mb-2 lg:mb-6 font-poppins hidden md:block'>
+            <h1 className='mb-2 font-bold text-3xl lg:text-4xl'>LOGO</h1>
 
-            <p className='font-medium text-base opacity-60'>
+            <p className='font-medium text-sm lg:text-base opacity-60'>
               &copy; 2022. All Rights Resevered
             </p>
           </div>
 
           <div>
-            <h1 className='font-montserrat font-bold text-xl'>Follow Us</h1>
+            <h1 className='font-montserrat font-bold text-lg lg:text-xl'>Follow Us</h1>
             <ul className='flex gap-2 font-space text-base opacity-70'>
               <li>FB</li>
               <li>IG</li>
@@ -307,11 +307,11 @@ const App = () => {
             },
           ].map((navItem) => (
             <div key={navItem.title}>
-              <h1 className='font-bold font-space text-base lg:text-xl mb-4'>
+              <h1 className='font-bold font-space text-base md:text-lg lg:text-xl mb-2 lg:mb-4'>
                 {navItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins font-medium text-base lg:text-xl'>
+              <ul className='flex flex-col gap-2 lg:gap-4 font-poppins font-medium text-base md:text-lg lg:text-xl'>
                 {navItem.links.map((footerLinks) => (
                   <li key={footerLinks}>
                     <button>
@@ -341,11 +341,11 @@ const App = () => {
             },
           ].map((footerItem) => (
             <div key={footerItem.title}>
-              <h1 className='font-bold font-space text-base lg:text-xl mb-4'>
+              <h1 className='font-bold font-space text-base md:text-lg lg:text-xl mb-2 lg:mb-4'>
                 {footerItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins font-medium text-base lg:text-xl opacity-70'>
+              <ul className='flex flex-col gap-2 lg:gap-4 font-poppins font-medium text-base md:text-lg lg:text-xl opacity-70'>
                 {footerItem.links.map((footerLinks) => (
                   <li key={footerLinks}>{footerLinks}</li>
                 ))}
@@ -354,7 +354,7 @@ const App = () => {
           ))}
         </div>
 
-        <p className='font-medium text-sm mt-2 opacity-70 text-center'>
+        <p className='font-medium text-sm md:text-base mt-2 opacity-70 text-center lg:hidden'>
           &copy; 2022. All Rights Resevered
         </p>
       </footer>
