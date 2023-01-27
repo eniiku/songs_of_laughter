@@ -87,12 +87,12 @@ const App = () => {
 
       {/* What We Do Section */}
 
-      <div id='what-we-do' className='min-h-screen text-center my-16 lg:my-32'>
-        <h1 className='font-montserrat font-bold text-4xl lg:text-[64px]'>
+      <div id='what-we-do' className='min-h-screen md:min-h-[80vh] lg:min-h-screen text-center my-16 md:my-28 lg:my-32'>
+        <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-[64px]'>
           What We Do
         </h1>
 
-        <div className='w-full grid lg:grid-cols-3 gap-8 lg:gap-6 mt-8'>
+        <div className='w-full grid md:grid-cols-3 gap-8 lg:gap-6 mt-8 md:mt-16 lg:mt-8'>
           {[
             {
               title: 'Support Children’s Education',
@@ -108,15 +108,15 @@ const App = () => {
             },
           ].map((cardItem, index) => (
             <div key={cardItem.title} className='w-full'>
-              <div className='font-libre text-lg lg:text-2xl text-center rounded-full py-3 lg:py-5 px-5 lg:px-7 bg-slate-400 w-fit mx-auto'>
+              <div className='font-libre text-lg md:text-xl lg:text-2xl text-center rounded-full py-3 md:py-4 lg:py-5 px-5 md:px-6 lg:px-7 bg-slate-400 w-fit mx-auto'>
                 {index + 1}
               </div>
 
-              <h1 className='font-space font-bold text-xl lg:text-[32px] mb-2 lg:mb-4 mt-3 lg:mt-6'>
+              <h1 className='font-space font-bold text-xl md:text-2xl lg:text-[32px] mb-2 md:mb-3 lg:mb-4 mt-3 lg:mt-6'>
                 {cardItem.title}
               </h1>
 
-              <p className='text-base lg:text-xl leading-[2] w-[95%] lg:w-auto mx-auto lg:mx-0'>
+              <p className='text-base md:text-lg lg:text-xl leading-[2] w-[95%] lg:w-auto mx-auto lg:mx-0'>
                 {cardItem.text}
               </p>
             </div>
