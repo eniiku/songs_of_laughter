@@ -300,13 +300,13 @@ const App = () => {
                 {navItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins text-sm lg:text-xl'>
+              <ul className='flex flex-col gap-4 font-poppins font-medium text-base lg:text-xl'>
                 {navItem.links.map((footerLinks) => (
                   <li key={footerLinks}>
                     <button>
                       <a
                         href={`#${footerLinks}`}
-                        className='capitalize opacity-70 hover:opacity-100 hover:font-medium'
+                        className='capitalize opacity-70 hover:opacity-100 hover:font-bold'
                       >
                         {footerLinks}
                       </a>
@@ -330,11 +330,11 @@ const App = () => {
             },
           ].map((footerItem) => (
             <div key={footerItem.title}>
-              <h1 className='font-bold font-space text-sm lg:text-xl mb-4'>
+              <h1 className='font-bold font-space text-base lg:text-xl mb-4'>
                 {footerItem.title}
               </h1>
 
-              <ul className='flex flex-col gap-4 font-poppins font-medium text-sm lg:text-xl opacity-70'>
+              <ul className='flex flex-col gap-4 font-poppins font-medium text-base lg:text-xl opacity-70'>
                 {footerItem.links.map((footerLinks) => (
                   <li key={footerLinks}>{footerLinks}</li>
                 ))}
@@ -343,7 +343,7 @@ const App = () => {
           ))}
         </div>
 
-        <p className='font-medium text-xs mt-2 opacity-70 text-center'>
+        <p className='font-medium text-sm mt-2 opacity-70 text-center'>
           &copy; 2022. All Rights Resevered
         </p>
       </footer>
