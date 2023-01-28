@@ -9,21 +9,21 @@ const App = () => {
 
       <div
         id='home'
-        className='w-full min-h-[90vh] md:min-h-[70vh] relative grid items-center lg:justify-start z-0'
+        className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start z-0'
       >
-        <div className='absolute inset-0 lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] bg-[#125A71] -z-10'></div>
+        <div className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] bg-[#125A71] -z-10'></div>
 
-        <div className='my-auto text-center'>
+        <div className='my-auto text-center lg:text-left lg:pt-[100px]'>
           <h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3'>
             Rebuilding Lives:
           </h1>
 
-          <p className='text-base md:text-lg lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto'>
+          <p className='text-base md:text-lg lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
             Supporting Widows, Divorcees, and Homeless Women on the Road to
             Self-Sufficiency
           </p>
 
-          <div className='flex gap-4 justify-center items-center'>
+          <div className='flex gap-4 justify-center items-center lg:justify-start'>
             <button
               className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
             lg:text-textWhite bg-textWhite'
