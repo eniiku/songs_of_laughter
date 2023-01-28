@@ -14,7 +14,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
 
-      <div className='hidden lg:block'>
+      <div className='hidden lg:flex gap-8 items-center'>
         <nav>
           <ul className='font-space text-lg flex gap-8 text-textBlack'>
             {navLinks.map((navLink) => (
