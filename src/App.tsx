@@ -72,13 +72,13 @@ const App = () => {
             About Our Company
           </h1>
 
-          <p className='text-base md:text-lg lg:text-xl leading-[2] w-[85%] mx-auto md:mx-0 lg:mx-0'>
-            Lorem ipsum dolor sit amet consectetur. Laoreet sed est dui gravida
-            fames est. Tellus a amet suspendisse lectus justo hac proin. Tempus
-            viverra at at elementum dolor bibendum. Tempus mi facilisis faucibus
-            dolor ligula maecenas. Et amet enim et bibendum nunc ornare. Sodales
-            vitae lectus massa amet mattis dictum ut. Porttitor sapien facilisis
-            volutpat odio tellus in velit.
+          <p className='text-base md:text-lg lg:text-xl leading-[1.9] lg:leading-[1.8] w-[85%] mx-auto md:mx-0 lg:mx-0 sm:text-left'>
+          We're a team of passionate individuals dedicated to empowering orphans, street children, widows, single mothers, and the disabled through support and education. 
+          Our goal is to break the cycle of poverty and create brighter futures.<br/> 
+          We believe in the power of education and are committed to making a difference, one person at a time, whether it's through our school programs or vocational training initiatives.<br/>
+          We're always on the lookout for ways to expand our reach and make an even bigger impact. That's why we're so grateful for your support - whether you're donating your time, money, or simply spreading the word about our mission.
+          Every little bit makes a difference, and we couldn't do what we do without you. <br/>
+          Let's work together and make a real difference.
           </p>
         </div>
 
