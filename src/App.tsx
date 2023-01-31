@@ -97,16 +97,16 @@ const App = () => {
         <div className='w-full grid md:grid-cols-3 gap-8 lg:gap-6 mt-8 md:mt-16 lg:mt-8'>
           {[
             {
-              title: 'Support Children’s Education',
-              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+              title: 'Providing Support to Members of Society',
+              text: "Our primary focus is to reach out to and support orphans, street children, widows, single mothers, and the disabled. We believe that everyone deserves the chance to live a safe, happy, and fulfilling life, and it's our mission to help make that a reality for as many people as possible.",
             },
             {
-              title: 'Create Awareness',
-              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+              title: 'Education for a Brighter Future',
+              text: "We believe that education is the key to breaking the cycle of poverty and building a better future. That's why we're dedicated to providing educational resources and opportunities to those in need. Whether it's through our school programs or vocational training initiatives, we're committed to empowering people to achieve their full potential.",
             },
             {
-              title: 'Provide Support',
-              text: 'Lorem ipsum dolor sit amet consectetur. Sit vel elementum libero eros lorem velit eget risus. Mattis ac vitae donec aliquet mattis adipiscing magna fermentum. Congue feugiat quisque turpis proin aliquet auctor pretium at dui.',
+              title: 'Making a Difference',
+              text: "We couldn't do what we do without the support of people like you. Whether you're donating your time, money, or simply spreading the word about our mission, your support makes a real difference in the lives of those who need it most. So, take a look around our website and see how you can get involved. Together, we can make a real impact and build a brighter future for all.",
             },
           ].map((cardItem, index) => (
             <div key={cardItem.title} className='w-full'>
@@ -114,11 +114,11 @@ const App = () => {
                 {index + 1}
               </div>
 
-              <h1 className='font-space font-bold text-xl md:text-2xl lg:text-[32px] mb-2 md:mb-3 lg:mb-4 mt-3 lg:mt-6'>
+              <h1 className='font-space font-bold text-xl md:text-2xl lg:text-[32px] mb-2 md:mb-3 lg:mb-4 mt-3 lg:mt-6 lg:leading-[1.3]'>
                 {cardItem.title}
               </h1>
 
-              <p className='text-base md:text-lg lg:text-xl leading-[2] w-[95%] lg:w-auto mx-auto lg:mx-0'>
+              <p className='text-base md:text-lg lg:text-xl leading-[1.8] lg:leading-[1.7] w-[95%] lg:w-auto mx-auto lg:mx-0'>
                 {cardItem.text}
               </p>
             </div>
