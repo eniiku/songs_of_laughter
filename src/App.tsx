@@ -132,9 +132,10 @@ const App = () => {
             Select your donation
           </h1>
 
-          <p className='text-lg md:text-xl w-[90%] lg:w-[80%] mx-auto'>
-            You give but little when you give of yourself, it when you give of
-            your yourself. Ready to the incredible?
+          <p className='text-lg md:text-xl lg:text-lg mx-auto w-[90%] lg:w-[85%]'>
+          "A small act of kindness can change a life forever." Join us in making a positive impact in the lives of those who need it the most.
+            Your donation can help provide them with the resources and education they need to build a brighter future. 
+            Make a difference today and donate to our cause. Thank you for your support.
           </p>
         </div>
 
