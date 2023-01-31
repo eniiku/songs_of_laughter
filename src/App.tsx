@@ -11,7 +11,9 @@ const App = () => {
         id='home'
         className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start z-0'
       >
-        <div className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] bg-[#125A71] -z-10'></div>
+        <div className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] -z-10
+          bg-[url(/src/assets/packaging.jpg)] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'>
+        </div>
 
         <div className='my-auto text-center lg:text-left lg:pt-[100px]'>
           <h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3'>
@@ -82,7 +84,7 @@ const App = () => {
           </p>
         </div>
 
-        <div className='w-full h-full bg-blue-300 hidden md:block'></div>
+        <div className='w-full h-full hidden md:block bg-[url(/src/assets/pack.jpg)] bg-cover bg-no-repeat bg-center bg-blend-overlay bg-white bg-opacity-10'></div>
       </div>
 
       {/* What We Do Section */}
