@@ -128,7 +128,7 @@ const App = () => {
 
       {/* TODO: center donation cards */}
       {/* Donate Section */}
-      <div className='min-h-screen md:min-h-[80vh] mb-16 md:mb-20 lg:mb-24 grid place-content-center'>
+      <div id="donate" className='min-h-screen md:min-h-[80vh] mb-16 md:mb-20 lg:mb-24 grid place-content-center'>
         <div className='text-center mb-8 md:mb-12 lg:mb-16'>
           <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-3'>
             Select your donation
@@ -209,7 +209,7 @@ const App = () => {
 
       {/* Contact Section */}
 
-      <div className='min-h-screen grid lg:grid-cols-2 gap-8 mb-8 mb:mb-16 lg:mb-24'>
+      <div id="contact" className='min-h-screen grid lg:grid-cols-2 gap-8 mb-8 mb:mb-16 lg:mb-24'>
         <div className='my-auto text-center lg:text-left'>
           <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-[1.2]'>
             Want to get involved? Contact us today.
@@ -308,7 +308,7 @@ const App = () => {
           {[
             {
               title: 'Navigation',
-              links: ['home', 'about', 'what we do', 'donate', 'get involved'],
+              links: [{text:'home', link: 'home'}, {text:'about',link:"about"}, {text:'what we do', link: "what-we-do"},{text: 'donate', link: "donate"}, {text:'get involved', link: "contact"}],
             },
           ].map((navItem) => (
             <div key={navItem.title}>
@@ -318,13 +318,13 @@ const App = () => {
 
               <ul className='flex flex-col gap-2 lg:gap-4 font-poppins font-medium text-base md:text-lg lg:text-xl'>
                 {navItem.links.map((footerLinks) => (
-                  <li key={footerLinks}>
+                  <li key={footerLinks.text}>
                     <button>
                       <a
-                        href={`#${footerLinks}`}
+                        href={`#${footerLinks.link}`}
                         className='capitalize opacity-70 hover:opacity-100 hover:font-bold'
                       >
-                        {footerLinks}
+                        {footerLinks.text}
                       </a>
                     </button>
                   </li>
