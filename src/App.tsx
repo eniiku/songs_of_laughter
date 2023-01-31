@@ -216,15 +216,17 @@ const App = () => {
           </h1>
           <div className='text-lg md:text-xl lg:leading-[2] leading-[1.6]'>
             <p className='w-[90%] lg:w-[80%] mx-auto lg:mx-0'>
-              Lorem ipsum dolor sit amet consectetur. Sit velit aenean eros
-              lacus purus quam arcu quisque. Ipsum felis fermentum non arcu
-              ornare scelerisque quam malesuada. Tellus id at amet vel quis ac.
-              Quis elementum varius hac pellentesque ultrices felis.
+            "The greatest good you can do for another is not just share your riches, but reveal to them their own." 
+            <br/>Join us in making a difference in the lives of those in need.
+            By volunteering or reaching out to us, you have the power to change someone's life for the better.
+            Whether it's through your time, skills, or resources, every little bit counts. 
+            <br/>So, why not make a difference today and become a part of our mission to empower in need with education and support.
+            The world needs more people like you.
             </p>
 
             <div className='mt-4 hidden lg:block'>
-              <p>Phone: +(234) 8011223344</p>
-              <p>Email: johndoe@gmail.com</p>
+              <p><span className="font-medium text-xl md:text-[22px]">Phone:</span>{' '}+(234)8011223344</p>
+              <p><span className="font-medium text-xl text-[22px]">Email:</span>{' '} sourceoflaughter21@gmail.com</p>
             </div>
           </div>
         </div>
