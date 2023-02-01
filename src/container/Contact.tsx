@@ -1,4 +1,29 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_3wnds6s',
+        'template_4dooi88',
+        form.current!,
+        'w00fj6hp4KXcAjkyT'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       id='contact'
@@ -44,11 +69,15 @@ const Contact = () => {
       {/* FIXME: change padding on form, style text in form */}
       {/* TODO: add placeholder text for form */}
 
-      <form className='border border-textBlack p-8 flex flex-col justify-between'>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className='border border-textBlack p-8 flex flex-col justify-between'
+      >
         {[
-          { label: 'name', type: 'text' },
-          { label: 'email', type: 'email' },
-          { label: 'subject', type: 'text' },
+          { label: 'name', type: 'text', name: 'user_name' },
+          { label: 'email', type: 'email', name: 'user_email' },
+          { label: 'subject', type: 'text', name: 'subject' },
         ].map((formDetails) => (
           <div key={formDetails.label}>
             <label
@@ -61,6 +90,7 @@ const Contact = () => {
             <input
               type={formDetails.type}
               id={formDetails.label}
+              name={formDetails.name}
               className='w-full my-4 bg-transparent border border-textBlack py-2 lg:py-3 px-2 lg:px-3'
             />
           </div>
@@ -74,13 +104,14 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            id='message'
+            name='message'
             className='w-full min-h-[150px] my-4 md:my-6 bg-transparent border border-textBlack py-2 lg:py-3 px-2 lg:px-3'
           ></textarea>
         </div>
 
         <button
           type='submit'
+          value='Send'
           className='px-6 lg:px-8 py-3 lg:py-4 font-space font-bold bg-[#125A71] text-textWhite text-lg lg:text-xl w-fit'
         >
           Donate Now
