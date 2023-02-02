@@ -12,20 +12,22 @@ const App = () => {
         id='home'
         className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start z-0'
       >
-        <div className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] -z-10
-          bg-[url(/src/assets/packaging.jpg)] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'>
-        </div>
+        <div
+          className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] -z-10
+          bg-[url(/src/assets/packaging.jpg)] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'
+        ></div>
 
         <div className='my-auto text-center lg:text-left lg:pt-[100px]'>
           <h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3 lg:w-[70%]'>
-          Building Brighter Futures:
+            Building Brighter Futures:
           </h1>
 
           <p className='text-base md:text-lg lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
-          We know that true change happens one person at a time. 
-          That's why we're focused on making a real impact in the lives of those in the society. 
-          We are dedicated to providing the support and education needed to help each individual reach their full potential.
-          Join us as we work to build brighter futures, one person at a time.
+            We know that true change happens one person at a time. That's why
+            we're focused on making a real impact in the lives of those in the
+            society. We are dedicated to providing the support and education
+            needed to help each individual reach their full potential. Join us
+            as we work to build brighter futures, one person at a time.
           </p>
 
           <div className='flex gap-4 justify-center items-center lg:justify-start'>
@@ -43,7 +45,7 @@ const App = () => {
                 href='#about'
                 className='underline underline-offset-4 text-base lg:text-lg font-medium opacity-60 hover:opacity-100 text-textBlack'
               >
-                See more >
+                See more
               </a>
             </button>
           </div>
@@ -78,12 +80,21 @@ const App = () => {
           </h1>
 
           <p className='text-base md:text-lg lg:text-xl leading-[1.9] lg:leading-[1.8] w-[85%] mx-auto md:mx-0 lg:mx-0 sm:text-left'>
-          We're a team of passionate individuals dedicated to empowering orphans, street children, widows, single mothers, and the disabled through support and education. 
-          Our goal is to break the cycle of poverty and create brighter futures.<br/> 
-          We believe in the power of education and are committed to making a difference, one person at a time, whether it's through our school programs or vocational training initiatives.<br/>
-          We're always on the lookout for ways to expand our reach and make an even bigger impact. That's why we're so grateful for your support - whether you're donating your time, money, or simply spreading the word about our mission.
-          Every little bit makes a difference, and we couldn't do what we do without you. <br/>
-          Let's work together and make a real difference.
+            We're a team of passionate individuals dedicated to empowering
+            orphans, street children, widows, single mothers, and the disabled
+            through support and education. Our goal is to break the cycle of
+            poverty and create brighter futures.
+            <br />
+            We believe in the power of education and are committed to making a
+            difference, one person at a time, whether it's through our school
+            programs or vocational training initiatives.
+            <br />
+            We're always on the lookout for ways to expand our reach and make an
+            even bigger impact. That's why we're so grateful for your support -
+            whether you're donating your time, money, or simply spreading the
+            word about our mission. Every little bit makes a difference, and we
+            couldn't do what we do without you. <br />
+            Let's work together and make a real difference.
           </p>
         </div>
 
@@ -92,7 +103,10 @@ const App = () => {
 
       {/* What We Do Section */}
 
-      <div id='what-we-do' className='min-h-screen md:min-h-[80vh] lg:min-h-screen text-center my-16 md:my-28 lg:my-32'>
+      <div
+        id='what-we-do'
+        className='min-h-screen md:min-h-[80vh] lg:min-h-screen text-center my-16 md:my-28 lg:my-32'
+      >
         <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-[64px]'>
           What We Do
         </h1>
@@ -131,16 +145,21 @@ const App = () => {
 
       {/* TODO: center donation cards */}
       {/* Donate Section */}
-      <div id="donate" className='min-h-screen md:min-h-[80vh] mb-16 md:mb-20 lg:mb-24 grid place-content-center'>
+      <div
+        id='donate'
+        className='min-h-screen md:min-h-[80vh] mb-16 md:mb-20 lg:mb-24 grid place-content-center'
+      >
         <div className='text-center mb-8 md:mb-12 lg:mb-16'>
           <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-3'>
             Select your donation
           </h1>
 
           <p className='text-lg md:text-xl lg:text-lg mx-auto w-[90%] lg:w-[85%]'>
-          "A small act of kindness can change a life forever." Join us in making a positive impact in the lives of those who need it the most.
-            Your donation can help provide them with the resources and education they need to build a brighter future. 
-            Make a difference today and donate to our cause. Thank you for your support.
+            "A small act of kindness can change a life forever." Join us in
+            making a positive impact in the lives of those who need it the most.
+            Your donation can help provide them with the resources and education
+            they need to build a brighter future. Make a difference today and
+            donate to our cause. Thank you for your support.
           </p>
         </div>
 
@@ -215,7 +234,7 @@ const App = () => {
 
       {/* Footer Section */}
       <footer className='grid lg:grid-cols-2 gap-4 py-6 md:py-12 lg:py-16'>
-        <div className="md:grid grid-cols-2 lg:block">
+        <div className='md:grid grid-cols-2 lg:block'>
           <div className='mb-2 lg:mb-6 font-poppins hidden md:block'>
             <h1 className='mb-2 font-bold text-3xl lg:text-4xl'>LOGO</h1>
 
@@ -225,7 +244,9 @@ const App = () => {
           </div>
 
           <div>
-            <h1 className='font-montserrat font-bold text-lg lg:text-xl'>Follow Us</h1>
+            <h1 className='font-montserrat font-bold text-lg lg:text-xl'>
+              Follow Us
+            </h1>
             <ul className='flex gap-2 font-space text-base opacity-70'>
               <li>FB</li>
               <li>IG</li>
@@ -240,7 +261,13 @@ const App = () => {
           {[
             {
               title: 'Navigation',
-              links: [{text:'home', link: 'home'}, {text:'about',link:"about"}, {text:'what we do', link: "what-we-do"},{text: 'donate', link: "donate"}, {text:'get involved', link: "contact"}],
+              links: [
+                { text: 'home', link: 'home' },
+                { text: 'about', link: 'about' },
+                { text: 'what we do', link: 'what-we-do' },
+                { text: 'donate', link: 'donate' },
+                { text: 'get involved', link: 'contact' },
+              ],
             },
           ].map((navItem) => (
             <div key={navItem.title}>
