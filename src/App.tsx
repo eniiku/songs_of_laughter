@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import Navbar from './container/Navbar';
 import Contact from './container/Contact';
 
@@ -18,9 +20,9 @@ const App = () => {
         ></div>
 
         <div className='my-auto text-center lg:text-left lg:pt-[100px]'>
-          <h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3 lg:w-[70%]'>
+          <motion.h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3 lg:w-[70%]'>
             Building Brighter Futures:
-          </h1>
+          </motion.h1>
 
           <p className='text-base md:text-lg lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
             We know that true change happens one person at a time. That's why
@@ -107,11 +109,33 @@ const App = () => {
         id='what-we-do'
         className='min-h-screen md:min-h-[80vh] lg:min-h-screen text-center my-16 md:my-28 lg:my-32'
       >
-        <h1 className='font-montserrat font-bold text-4xl md:text-5xl lg:text-[64px]'>
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.6 }}
+          transition={{ duration: 0.3 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className='font-montserrat font-bold text-4xl md:text-5xl lg:text-[64px]'
+        >
           What We Do
-        </h1>
+        </motion.h1>
 
-        <div className='w-full grid md:grid-cols-3 gap-8 lg:gap-6 mt-8 md:mt-16 lg:mt-8'>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: '-50%' },
+            show: {
+              opacity: 1,
+              x: 0,
+              transition: {
+                staggerChildren: 0.3,
+                duration: 0.4,
+              },
+            },
+          }}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true }}
+          className='w-full grid md:grid-cols-3 gap-8 lg:gap-6 mt-8 md:mt-16 lg:mt-16'
+        >
           {[
             {
               title: 'Providing Support to Members of Society',
@@ -126,7 +150,14 @@ const App = () => {
               text: "We couldn't do what we do without the support of people like you. Whether you're donating your time, money, or simply spreading the word about our mission, your support makes a real difference in the lives of those who need it most. So, take a look around our website and see how you can get involved. Together, we can make a real impact and build a brighter future for all.",
             },
           ].map((cardItem, index) => (
-            <div key={cardItem.title} className='w-full'>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1 },
+              }}
+              key={cardItem.title}
+              className='w-full'
+            >
               <div className='font-libre text-lg md:text-xl lg:text-2xl text-center rounded-full py-3 md:py-4 lg:py-5 px-5 md:px-6 lg:px-7 bg-slate-400 w-fit mx-auto'>
                 {index + 1}
               </div>
@@ -138,9 +169,9 @@ const App = () => {
               <p className='text-base md:text-lg lg:text-xl leading-[1.8] lg:leading-[1.7] w-[95%] lg:w-auto mx-auto lg:mx-0'>
                 {cardItem.text}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* TODO: center donation cards */}
