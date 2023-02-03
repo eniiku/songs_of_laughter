@@ -179,7 +179,6 @@ const App = () => {
         </motion.div>
       </div>
 
-      {/* TODO: center donation cards */}
       {/* Donate Section */}
       <div
         id='donate'
@@ -206,7 +205,7 @@ const App = () => {
           ].map((cardItem) => (
             <div
               key={cardItem.price}
-              className='relative md:w-[80%] w-[70%] bg-white shadow-xl'
+              className='relative md:w-[80%] w-[70%] bg-white shadow-xl mx-auto lg:mx-0'
             >
               <div className='w-full h-1 md:h-2 absolute top-0 bg-[#125A71]'></div>
 
@@ -228,7 +227,7 @@ const App = () => {
             </div>
           ))}
 
-          <div className='relative lg:w-[80%] w-[70%] bg-white shadow-xl'>
+          <div className='relative lg:w-[80%] w-[70%] bg-white shadow-xl mx-auto lg:mx-0'>
             <div className='w-full h-1 md:h-2 absolute top-0 bg-[#125A71]'></div>
 
             <div className='px-4 py-3 my-4'>
