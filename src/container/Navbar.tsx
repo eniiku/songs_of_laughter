@@ -56,7 +56,7 @@ const Navbar = () => {
 
       {isOpen ? (
         <div className='lg:hidden'>
-          <nav className='absolute inset-0 bg-textBlack z-30 grid items-center'>
+          <nav className='fixed inset-0 bg-textBlack z-30 grid items-center'>
             <ul>
               {navLinks.map((mobileLinks) => (
                 <li
