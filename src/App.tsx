@@ -48,12 +48,14 @@ const App = () => {
           </div>
         </div>
 
-        <div className='relative bg-[url(/src/assets/packaging.jpg)] z-0 bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'>
-          <img src={packaging} />
+        <div className='hidden lg:block'>
+          <div className='relative z-0'>
+            <img src={packaging} />
 
-          <div className='absolute -z-30 h-[70%] w-[100px] bg-cyan-600 -left-6 top-[15%]'></div>
+            <div className='absolute -z-30 h-[70%] w-[100px] bg-cyan-600 -left-6 top-[15%]'></div>
 
-          <div className='absolute -z-30 h-[50%] w-[40%] bg-cyan-600 -right-5 -top-5'></div>
+            <div className='absolute -z-30 h-[50%] w-[40%] bg-cyan-600 -right-5 -top-5'></div>
+          </div>
         </div>
       </div>
 
