@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+import packaging from './assets/packaging.jpg';
+import pack2 from './assets/pack2.jpg';
 import Navbar from './container/Navbar';
 import Contact from './container/Contact';
 
@@ -12,30 +14,23 @@ const App = () => {
 
       <div
         id='home'
-        className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start z-0'
+        className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start lg:grid-cols-2 lg:gap-8'
       >
-        <div
-          className='absolute inset-0 lg:inset-auto lg:-right-16 lg:top-0 lg:w-[70vw] lg:h-[90vh] -z-10
-          bg-[url(/src/assets/packaging.jpg)] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'
-        ></div>
-
-        <div className='my-auto text-center lg:text-left lg:pt-[100px]'>
-          <motion.h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-3 lg:w-[70%]'>
+        <div className='my-auto text-center lg:text-left'>
+          <motion.h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-6xl lg:leading-[1.2] mb-3 lg:mb-4 '>
             Building Brighter Futures:
           </motion.h1>
 
-          <p className='text-base md:text-lg lg:text-xl w-[85%] lg:w-2/3 mb-3 lg:mb-4 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
+          <p className='text-base md:text-lg lg:text-xl w-[85%] mb-3 lg:mb-7 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
             We know that true change happens one person at a time. That's why
             we're focused on making a real impact in the lives of those in the
-            society. We are dedicated to providing the support and education
-            needed to help each individual reach their full potential. Join us
-            as we work to build brighter futures, one person at a time.
+            society.
           </p>
 
           <div className='flex gap-4 justify-center items-center lg:justify-start'>
             <button
               className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
-            lg:text-textWhite bg-textWhite'
+              lg:text-textWhite bg-textWhite'
             >
               <a href='#donate' className='text-lg lg:text-xl'>
                 Donate Now
@@ -51,6 +46,14 @@ const App = () => {
               </a>
             </button>
           </div>
+        </div>
+
+        <div className='relative bg-[url(/src/assets/packaging.jpg)] z-0 bg-cover bg-center bg-no-repeat bg-blend-overlay bg-white bg-opacity-10'>
+          <img src={packaging} />
+
+          <div className='absolute -z-30 h-[70%] w-[100px] bg-cyan-600 -left-6 top-[15%]'></div>
+
+          <div className='absolute -z-30 h-[50%] w-[40%] bg-cyan-600 -right-5 -top-5'></div>
         </div>
       </div>
 
