@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleCloseMenu = () => setIsOpen(false);
 
   return (
-    <header className='flex items-center justify-between py-6'>
+    <header className='flex items-center justify-between py-6 z-0'>
       <h1 className='font-montserrat font-bold text-2xl lg:text-3xl'>LOGO</h1>
 
       {/* Desktop Nav */}
@@ -61,27 +61,29 @@ const Navbar = () => {
       </button>
 
       {isOpen ? (
-        <div className='lg:hidden'>
-          <nav className='fixed inset-0 bg-textBlack z-30 grid items-center'>
-            <ul>
-              {navLinks.map((mobileLinks) => (
-                <li
-                  key={mobileLinks.text}
-                  className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5'
-                >
-                  <button onClick={handleCloseMenu}>
-                    <a
-                      href={`#${mobileLinks.link}`}
-                      className='text-xl font-medium text-textWhite capitalize'
-                    >
-                      {mobileLinks.text}
-                    </a>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <motion.nav
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className='lg:hidden fixed inset-0 bg-textBlack z-30 grid items-center'
+        >
+          <ul>
+            {navLinks.map((mobileLinks) => (
+              <li
+                key={mobileLinks.text}
+                className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5'
+              >
+                <button onClick={handleCloseMenu}>
+                  <a
+                    href={`#${mobileLinks.link}`}
+                    className='text-xl font-medium text-textWhite capitalize'
+                  >
+                    {mobileLinks.text}
+                  </a>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </motion.nav>
       ) : null}
     </header>
   );
