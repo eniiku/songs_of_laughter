@@ -16,10 +16,25 @@ const App = () => {
         id='home'
         className='w-full min-h-[90vh] md:min-h-[70vh] lg:min-h-[90vh] lg:my-2 relative grid items-center lg:justify-start lg:grid-cols-2 lg:gap-8'
       >
-        <div className='my-auto text-center lg:text-left'>
-          <motion.h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-6xl lg:leading-[1.2] mb-3 lg:mb-4 '>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+                duration: 0.4,
+              },
+            },
+          }}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true }}
+          className='my-auto text-center lg:text-left'
+        >
+          <h1 className='font-montserrat font-bold text-5xl md:text-6xl lg:text-6xl lg:leading-[1.2] mb-3 lg:mb-4 '>
             Building Brighter Futures:
-          </motion.h1>
+          </h1>
 
           <p className='text-base md:text-lg lg:text-xl w-[85%] mb-3 lg:mb-7 leading-[1.5] lg:leading-[165%] mx-auto lg:mx-0'>
             We know that true change happens one person at a time. That's why
@@ -28,25 +43,32 @@ const App = () => {
           </p>
 
           <div className='flex gap-4 justify-center items-center lg:justify-start'>
-            <button
-              className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-[#125A71] text-[#125A71] 
-              lg:text-textWhite bg-textWhite'
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: '#125a71',
+                color: '#ececec',
+                marginRight: '1rem',
+              }}
+              transition={{ duration: 0.3 }}
+              className='px-6 lg:px-8 py-3 lg:py-4 rounded-full font-space font-bold lg:bg-transparent border-2 border-[#125A71] text-[#125A71] 
+              lg:text-[#125a71] bg-textWhite'
             >
               <a href='#donate' className='text-lg lg:text-xl'>
                 Donate Now
               </a>
-            </button>
+            </motion.button>
 
             <button>
               <a
                 href='#about'
                 className='underline underline-offset-4 text-base lg:text-lg font-medium opacity-60 hover:opacity-100 text-textBlack'
               >
-                See more
+                See more &rarr;
               </a>
             </button>
           </div>
-        </div>
+        </motion.div>
 
         <div className='hidden lg:block'>
           <div className='relative z-0'>
