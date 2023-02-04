@@ -68,18 +68,15 @@ const Navbar = () => {
         >
           <ul>
             {navLinks.map((mobileLinks) => (
-              <li
-                key={mobileLinks.text}
-                className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5'
-              >
-                <button onClick={handleCloseMenu}>
-                  <a
-                    href={`#${mobileLinks.link}`}
-                    className='text-xl font-medium text-textWhite capitalize'
+              <li key={mobileLinks.text}>
+                <a href={`#${mobileLinks.link}`} className=''>
+                  <button
+                    className='w-full border-y border-y-textWhite border-opacity-40 pl-8 py-5 text-xl font-medium text-textWhite uppercase'
+                    onClick={handleCloseMenu}
                   >
                     {mobileLinks.text}
-                  </a>
-                </button>
+                  </button>
+                </a>
               </li>
             ))}
           </ul>
