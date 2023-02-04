@@ -4,6 +4,7 @@ import packaging from './assets/packaging.jpg';
 import pack2 from './assets/pack2.jpg';
 import Navbar from './container/Navbar';
 import Contact from './container/Contact';
+import DonateBtn from './components/DonateBtn';
 
 const App = () => {
   return (

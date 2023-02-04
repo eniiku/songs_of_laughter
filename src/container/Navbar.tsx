@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const navLinks = [
@@ -25,8 +26,6 @@ const Navbar = () => {
             {navLinks.map((navLink) => (
               <li key={navLink.text}>
                 <button>
-                  {/* TODO: set links to bold on hover and change font */}
-
                   <a
                     href={`#${navLink.link}`}
                     className='uppercase opacity-70 hover:opacity-100 hover:font-medium'
@@ -39,12 +38,19 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <button
-          className='py-3 px-8 bg-[#125A71] text-textWhite font-bold font-space text-lg
+        <motion.button
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: '#125a71',
+            color: '#ececec',
+            marginLeft: '1rem',
+          }}
+          transition={{ duration: 0.3 }}
+          className='py-3 px-8 bg-transparent border-2 border-[#125A71] text-[#125a71] font-bold font-space text-lg
         rounded-full'
         >
           <a href='#donate'>Donate Now</a>
-        </button>
+        </motion.button>
       </div>
 
       {/* Mobile Navbar */}
